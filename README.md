@@ -2,6 +2,17 @@
 
 ## Table of Content
 
+- [Introduction](#introduction)
+- [Description of custom protocol](#description-of-custom-protocol)
+- [Server Socket](#server-socket)
+  * [Never ending loop](#never-ending-loop)
+  * [Working with clients sockets](#working-with-clients-sockets)
+  * [Multi-threading](#multi-threading)
+- [Client class](#client-class)
+  * [Extending Thread Class](#extending-thread-class)
+  * [Allowing multiple clients](#allowing-multiple-clients)
+
+
 ## Introduction
 
 For this practical, our practical lecturer made a custom protocol for identifying languages 
