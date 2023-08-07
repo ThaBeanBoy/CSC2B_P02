@@ -31,9 +31,13 @@ Protocol:
 - [C] : Clients connects to the server
 - [S] : Sends the message : **"HELLO - you may make 4 requests and I’ll try to detect your language"**
 - [C] : Sends the message : **START** to start the language analysis.
-- [S] : Sends the message : **** indicating that the client can start sending:
+- [S] : Sends the message : **REQUEST or DONE** indicating that the client can start sending:
+- [C] : Sends the message : **REQUEST <Message>**
   - **REQUEST <Message>** : REQUEST indicates that the client want's the server to analyse the **Message** for language detection.  
   - **DONE** : Indicates that the client is done sending requests.
+... Multiple **REQUEST** from the client and responses from the Server **(Maximum of 4 requests)**
+- [C] : Sends the message : **DONE**
+- [S] : Sends the message : **GOOD BYE - <Number of queries answered> queries answered**
 
 ## Server Socket
 
